@@ -1,0 +1,46 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Remote Control</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="device-list">
+            <h2>Perangkat Terhubung</h2>
+            <div id="devices"></div>
+            <button id="refresh-devices">Refresh</button>
+        </div>
+
+        <div class="device-control" id="device-control">
+            <h2 id="device-title">Pilih Perangkat</h2>
+
+            <div class="screen-container">
+                <div id="device-screen" class="device-screen"></div>
+            </div>
+
+            <div class="control-buttons">
+                <button data-key="3">Home</button>
+                <button data-key="4">Back</button>
+                <button data-key="187">Recent</button>
+                <button data-key="26">Power</button>
+            </div>
+
+            <div class="text-input">
+                <input type="text" id="text-input" placeholder="Ketik teks...">
+                <button id="send-text">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</body>
+
+</html>
